@@ -20,6 +20,7 @@ const options = props.characters.map((character, index) => {
  {options}
 </select>)
 
+
 }
 
 

@@ -8,7 +8,8 @@ class CharacterContainer extends React.Component {
     super(props);
     this.state = {
       characters: [],
-      selectedCharacter: null
+      selectedCharacter: null,
+
     };
     this.handleCharacterSelected = this.handleCharacterSelected.bind(this);
   }
@@ -22,12 +23,13 @@ class CharacterContainer extends React.Component {
     .then((characters)=>{
       this.setState({ characters: characters});
     })
+  
+
   }
 
 handleCharacterSelected(index){
   const selectedCharacter = this.state.characters[index];
   this.setState({ selectedCharacter: selectedCharacter})
-
 }
 
 render() {
@@ -36,6 +38,7 @@ render() {
       <h1>Character Container</h1>
       <CharacterSelector characters={this.state.characters} onCharacterSelected={this.handleCharacterSelected}/>
       <CharacterDetail selectedCharacter={this.state.selectedCharacter}/>
+
     </div>
   );
 }
