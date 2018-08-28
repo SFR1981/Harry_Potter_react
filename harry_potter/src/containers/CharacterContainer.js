@@ -24,17 +24,11 @@ class CharacterContainer extends React.Component {
     })
   }
 
-
 handleCharacterSelected(index){
   const selectedCharacter = this.state.characters[index];
   this.setState({ selectedCharacter: selectedCharacter})
 
 }
-
-
-
-
-
 
 render() {
   return (
